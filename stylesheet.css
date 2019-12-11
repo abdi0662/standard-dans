@@ -1,0 +1,550 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face { font-family: blacksword; src: url('blacksword.otf'); }
+@font-face { font-family: blacksword; font-weight: bold; src: url('blacksword.otf');}
+
+body {
+  margin: 0px !important;
+  font-family: 'Lato', sans-serif;
+}
+
+header img {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Style the top navigation bar */
+.topnav {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  overflow: hidden;
+  background-color:#BE3A3C;
+  background-image: linear-gradient(#BE3A3C, #800F00) /*FF7B6A */
+}
+
+
+#os {grid-column: 1/2; grid-row: 1;}
+#pris {grid-column: 2/3; grid-row: 1;}
+#kontakt {grid-column: 1/2; grid-row: 2;}
+#tilmelding {grid-column: 2/3; grid-row: 2;}
+
+/* Style the topnav links */
+
+.topnav a {
+  display: block;
+  color: #F2F2F2;
+  text-align: center;
+  padding: 20px 10px;
+  text-decoration: none;
+	font-weight: bold;
+}
+
+/* Style the content */
+
+.content {
+	background-color:#F2F2F2;
+  padding: 20px;
+}
+
+/* grid til hele siden (applied on div) */
+
+#wrapper {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+}
+
+header {
+	grid-column: 1 / 4;
+  grid-row: 1;
+} /*header dækker hele siden ved at sætte den fra linje 1 til 5 i grid. hvis 12 koloner er der 13 linjer*/
+
+nav {
+	grid-column: 1 / 4;
+  grid-row: 2;
+}
+
+/* hertil */
+
+main {
+	grid-column: 1 / 4;
+  grid-row: 3;
+}
+
+/* code to animate baackground on index */
+
+.pic_container {
+  grid-column: 1 / 4;
+  Left: 0;
+  top: 0;
+  width: 100%;
+  height: 50vh;
+  animation: animate 16s ease-in-out infinite;
+  background-size: cover;
+}
+
+.outer {
+  grid-column: 1 / 4;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+/*  background: rgba(0,0,0,0.5) */
+}
+
+.details {
+  margin-top: 5em;
+  left: 50%;
+  top: 50%;
+  transform: translate(0%, 250%);
+  text-align: center;
+}
+
+.details h1 {
+  font-family: blacksword;
+  font-size: 3em;
+  color: #F2F2F2;
+  text-shadow:5px 5px 10px black;
+}
+.details h2 {
+  color: #F2F2F2;
+  text-shadow:5px 5px 10px black;
+}
+
+@keyframes animate{
+  0%,100%{
+    background-image: url(images/back1mobile.jpg);
+  }
+  25%{
+    background-image: url(images/back2mobile.jpg);
+  }
+  50%{
+    background-image: url(images/back3mobile.jpg);
+  }
+}
+
+/* Finished animating background */
+
+#slogan {
+  text-align: center;
+  margin: 20px;
+  font-size: 1.5em;
+}
+
+main article img {
+  max-width: 100%;
+}
+
+video {
+  display: none;
+	margin-top: -20px;
+}
+.left {
+	text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-family: blacksword;
+  font-size: 2.3em;
+  font-stretch: ultra-expanded;
+  margin-bottom: -20px;
+}
+
+h2 {
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+}
+p{
+	line-height: 1.8;
+}
+
+li {
+  text-align: center;
+}
+
+.priser{
+  text-align: center;
+}
+.image {
+  grid-row: 3;
+	max-width: 100%;
+  max-height: 100%;
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+
+article {
+	margin-bottom: 50px;
+}
+
+
+
+.image2 {
+  display: none;
+  float: right;
+	margin-top: -88px !important;
+	margin-right: -20px !important;
+	margin-left: 20px !important;
+	margin-bottom: 20px !important;
+}
+
+.kontaktimage {
+  display: none;
+	margin-top: -20px !important;
+	max-width: 100%;
+  max-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+/*udseende på bestillings blokkene der indeholder tekst*/
+input[type=text], select {
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+}
+   /*udseende på bestillings blokken der indeholder numre*/
+input[type=number], select {
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+}
+   /*udseendet på submit knappen*/
+input[type=submit] {
+   width: auto;
+   background-image: linear-gradient(#BE3A3C, #800F00);
+   color: White;
+	 font-weight: bold;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+}
+li {
+	line-height: 1.8;
+}
+#customers {
+  font-family: 'Lato', sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even);
+
+#customers tr:hover {background-color: #800F00;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-image: linear-gradient(#BE3A3C, #800F00);
+  color: white;
+}
+
+.center {
+	text-align: center !important;
+}
+.map {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+footer {
+	grid-column: 1 / 7;
+	font-weight: bold;
+  color: #F2F2F2;
+  text-shadow:5px 5px 10px black;
+
+}
+/* Style the footer */
+.footer {
+/*  background-color:#800F00; */
+  background-image: linear-gradient(#BE3A3C, #800F00);
+  padding: 10px;
+	text-align: center;
+}
+
+
+
+/* END OF MOBILE */
+
+/* BEGINNING OF WEB */
+
+@media screen and (min-width: 600px) {
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px !important;
+  font-family: 'Lato', sans-serif;
+}
+header img {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Style the top navigation bar */
+.topnav {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  overflow: hidden;
+  background-color:#BE3A3C;
+  background-image: linear-gradient(#BE3A3C, #800F00)
+}
+
+#os {grid-column: 1/2; grid-row: 1;}
+#pris {grid-column: 2/3; grid-row: 1;}
+#kontakt {grid-column: 3/4; grid-row: 1;}
+#tilmelding {grid-column: 4/5; grid-row: 1;}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px 100px;
+  text-decoration: none;
+	font-weight: bold;
+	margin-left: 75px;
+}
+
+/* Style the content */
+.content {
+	background-color:#F2F2F2;
+  padding: 20px;
+}
+
+main article {
+  padding-left: 13em;
+  padding-right: 13em;
+}
+
+#wrapper {
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto;
+} /* skriver 4 gange for at få 4 koloner*/
+
+header {
+	grid-column: 1 / 7;
+} /*header dækker hele siden ved at sætte den fra linje 1 til 5 i grid. hvis 12 koloner er der 13 linjer*/
+
+nav {
+	grid-column: 1 / 7;
+}
+
+main {
+	grid-column: 1 / 7;
+}
+
+/* fading background on index */
+
+.pic_container {
+  display: block;
+  grid-column: 1 / 7;
+  Left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  animation: animate 16s ease-in-out infinite;
+  background-size: cover;
+}
+.outer {
+  grid-column: 1 / 7;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.5)
+}
+
+.details {
+  left: 50%;
+  top: 50%;
+  transform: translate(0%, 250%);
+  text-align: center;
+}
+
+.details h1 {
+  font-family: blacksword;
+  font-size: 8em;
+  color: #fff;
+}
+.details h2 {
+  color: #fff;
+}
+
+@keyframes animate{
+  0%,100%{
+    background-image: url(back1.png);
+  }
+  25%{
+    background-image: url(back2.png);
+  }
+  50%{
+    background-image: url(back3.png);
+  }
+}
+
+/* fade finished */
+
+main article img {
+  display:none;
+}
+
+/* left out as a test ------
+video {
+  display: block;
+	margin-top: -20px;
+}
+*/
+.left {
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+}
+p{
+	line-height: 1.8;
+}
+ul{
+  text-align: center;
+}
+
+article p{
+  padding-left:
+}
+
+
+.image {
+  float: right;
+	margin-top: -40px !important;
+	margin-right: -20px !important;
+	margin-left: 20px !important;
+	margin-bottom: -20px !important;
+}
+
+/* --- need to fix weird placement of picture */ ------
+.image2 {
+  display: block;
+  float: right;
+	margin-top: 100px;
+	margin-right: -20px !important;
+	margin-left: 20px !important;
+	margin-bottom: 20px !important;
+}
+.kontaktimage {
+	margin-top: -20px !important;
+	max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*udseende på bestillings blokkene der indeholder tekst*/
+input[type=text], select {
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+}
+   /*udseende på bestillings blokken der indeholder numre*/
+input[type=number], select {
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+}
+   /*udseendet på submit knappen*/
+input[type=submit] {
+   width: auto;
+   background-image: linear-gradient(#BE3A3C, #800F00);
+   color: White;
+	 font-weight: bold;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+}
+li {
+	line-height: 1.8;
+}
+#customers {
+  font-family: 'Lato', sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color:#D9D9D9;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-image: linear-gradient(#BE3A3C, #800F00);
+  color: white;
+}
+
+.center {
+	text-align: center !important;
+}
+
+.map {
+  text-align: center;
+  width: 100%;
+	max-width: 100%;
+
+}
+footer {
+	grid-column: 1 / 7;
+	font-weight: bold;
+}
+/* Style the footer */
+.footer {
+  background-color:#800F00;
+  padding: 10px;
+	text-align: center;
+}
